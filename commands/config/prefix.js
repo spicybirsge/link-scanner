@@ -5,19 +5,14 @@ module.exports = {
         if(!message.member.permissions.has("MANAGE_GUILD")) return message.channel.send({content: "Unable to run that command: \nThe prefix command requires you to have ManageGuild permission."})
         const prefix = args[0]
         if(!prefix) return message.channel.send({content: "You didn't provide a prefix argument."})
-        let data;
-        try {
-            data = await datap.findOne({
-                guildID: message.guild.id
-            })
-            if(!data) {
-                data2 = await datap.create({guildID: message.guild.id, prefix: prefix})
-                data2.save()
-            } else {
-                await datap.findOneAndUpdate({guildID: message.guild.id, prefix: prefix})            }
-        } catch {
-            console.log("something went wrong.")
+    datap.findOne({guildID: message.guild.id}, async(err, data) => {
+        if(data) {
+            data.prefix = prefix
+            await data.save()
+        } else {
+            new datap({guildID: message.guild.id, prefix: prefix}).save()
         }
+    })
             message.channel.send({content: `Updated prefix for this server to \`${prefix}\``})
         
 
