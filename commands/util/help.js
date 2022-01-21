@@ -10,7 +10,7 @@ module.exports = {
        
         const embed2 = new MessageEmbed()
         .setTitle("Utility")
-        .setDescription("`ping` - shows the bots ping and latency \n`botinfo` - shows some stats related to the bot. \n`support` - sends the support server url. \n`settings` - sends the current server configuration. \n`/check` - check if a domain is a know scam domain or not.")
+        .setDescription("`ping` - shows the bots ping and latency \n`botinfo` - shows some stats related to the bot. \n`support` - sends the support server url. \n`settings` - sends the current server configuration. \n`/check` - check if a domain is a know scam domain or not. \n`/prefix` - sends the current prefix of me.")
         .setColor("RANDOM")
         const embed3 = new MessageEmbed()
         .setTitle("Config")
