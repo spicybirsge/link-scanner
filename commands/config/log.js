@@ -14,6 +14,8 @@ module.exports = {
         if(c === "members") {
             const channel = message.mentions.channels.first()
             if(!channel) return message.channel.send({content: "You did not provide a channel as an argument."})
+            const test = message.guild.channels.cache.get(channel.id)
+            if(!test) return message.channel.send({content: "You did not provide a channel as an argument."})
             log.findOne({guildID: message.guild.id}, async(err, data) => {
             if(data) {
                 data.channelID = channel.id
@@ -26,6 +28,8 @@ module.exports = {
         } if(c === "messages") {
             const channel = message.mentions.channels.first()
             if(!channel) return message.channel.send({content: "You did not provide a channel as an argument."})
+            const test2 = message.guild.channels.cache.get(channel.id)
+            if(!test2) return message.channel.send({content: "You did not provide a channel as an argument."})
             messages.findOne({guildID: message.guild.id}, async(err, data) => {
                 if(data) {
                     data.channelID = channel.id
