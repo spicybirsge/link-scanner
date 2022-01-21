@@ -12,14 +12,24 @@ module.exports = {
         s.setTitle(`Settings for ${message.guild.name}`)
         s.setColor("#db149f")
         if(p) {
-            s.addField('Prefix:', p.prefix || "s.", true)
+            s.addField('Prefix:', p.prefix || "s.")
+        } else {
+            s.addField('Prefix:', "s.")
+
         }
         if(d) {
-            s.addField('Member log channel ID:', d.channelID || "No Log Channel", true)
-            s.addField('Action:', d.action || "None", true)
-        }
+            s.addField('Member log channel ID:', d.channelID || "No Log Channel")
+            s.addField('Action:', d.action || "None")
+        } else {
+            s.addField('Member log channel ID:', "No Log Channel")
+            s.addField('Action:', "None")
+
+        } 
         if(m) {
-            s.addField('Message log channel ID:', m.channelID || "None", true)
+            s.addField('Message log channel ID:', m.channelID || "None")
+        } else {
+
+            s.addField('Message log channel ID:', "None")
         }
         message.channel.send({embeds: [s]})
 
