@@ -30,10 +30,10 @@ module.exports = {
 
         const status = f.status
         if(status === 200) {
-            return interaction.followUp({content: ":white_check_mark: This is a know scam domain."})
+            return interaction.followUp({content: ":white_check_mark: This is a known scam domain."})
 
         } else {
-            return interaction.followUp({content: ":x: This is a not know scam domain."})
+            return interaction.followUp({content: ":x: This is a not known scam domain."})
 
         }
 

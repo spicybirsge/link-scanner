@@ -4,7 +4,7 @@ module.exports = {
     description: "Get the servers prefix",
     run: async (client, interaction) => {
 
-    const data = await prefix.findOne({guildID: interaction.guild.id}, async (err, data) => {
+prefix.findOne({guildID: interaction.guild.id}, async (err, data) => {
         if(data) {
             GUILD_PREFIX = data.prefix
             
