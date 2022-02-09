@@ -12,7 +12,7 @@ log.findOne({guildID: message.guild.id}, async (err , data) => {
     if(!channel) return;
     const updated = new MessageEmbed()
     .setAuthor({ name: 'Message Updated', iconURL: message.author.avatarURL() })
-    .setDescription(`Author: ${message.author.tag} \nUser ID: ${message.author.id} \nChannel: #${message.channel.name} \nOld Message: ${oldmessage.content || "NO_CONTENT_AVAILABLE"} \nNew Message: ${message.content || "NO_CONTENT_AVAILABLE"}`)
+    .setDescription(`**Author:** ${message.author.tag} \n**User ID:** ${message.author.id} \n**Channel:** <#${message.channel.id}> \n**Old Message:** ${oldmessage.content || "NO_CONTENT_AVAILABLE"} \n**New Message:** ${message.content || "NO_CONTENT_AVAILABLE"}`)
     .setColor("YELLOW")
     if(message.attachments.size > 0) {
     message.attachments.forEach(attachment => {

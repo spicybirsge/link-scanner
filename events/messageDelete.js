@@ -11,7 +11,7 @@ log.findOne({guildID: message.guild.id}, async (err , data) => {
     if(!channel) return;
     const deleted = new MessageEmbed()
     .setAuthor({ name: 'Message Deleted', iconURL: message.author.avatarURL() })
-    .setDescription(`Author: ${message.author.tag} \nUser ID: ${message.author.id} \nChannel: #${message.channel.name} \nDeleted Message: ${message.content || "NO_CONTENT_AVAILABLE"}`)
+    .setDescription(`**Author:** ${message.author.tag} \n**User ID:** ${message.author.id} \n**Channel:** <#${message.channel.id}> \n**Deleted Message:** ${message.content || "NO_CONTENT_AVAILABLE"}`)
     .setColor("RED")
     if(message.attachments.size > 0) {
         message.attachments.forEach(attachment => {
