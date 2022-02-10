@@ -35,10 +35,10 @@ module.exports = async (client) => {
         arrayOfSlashCommands.push(file);
     });
     client.on("ready", async () => {
-        await console.log("Loading slash commands")
+        await console.log(`Shard #${client.shard.ids*1+1}: Loading slash commands`)
         await client.application.commands.set(arrayOfSlashCommands);
-        await console.log("Loaded slash commands")
+        await console.log(`Shard #${client.shard.ids*1+1}: Loaded slash commands `)
     })
 
-    mongoose.connect(process.env.secret).then(() => console.log('Connected to mongodb'));
+    mongoose.connect(process.env.secret).then(() => console.log(`Shard #${client.shard.ids*1+1}: Connected to mongodb `));
 };

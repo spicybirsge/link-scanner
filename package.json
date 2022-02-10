@@ -2,7 +2,7 @@
   "name": "link-scanner",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "shard.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "colors": "^1.4.0",
     "cpu-stat": "^2.0.1",
     "discord.js": "^13.5.1",
     "dotenv": "^11.0.0",
