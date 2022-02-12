@@ -25,6 +25,7 @@ if(oldmessage.content === message.content) return;
         const status = f.status
   
         if(status === 200) {
+            console.log(`Found a phishing link in the guild: ${message.guild.name}`)
             message.delete()
      log.findOne({guildID: message.guild.id}, async (err, data) => {
 

@@ -3,7 +3,7 @@ const { ShardingManager} = require("discord.js")
 const colors = require("colors")
 const shards = new ShardingManager("./index.js" , {
   token : process.env.token,
-  totalShards : 2,
+  totalShards : 1,
   spawnTimeout: -1,
   respawn : true
 })
