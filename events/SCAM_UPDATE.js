@@ -1,8 +1,7 @@
 const client = require("../index");
 const { MessageEmbed}  = require("discord.js")
 const fetch = require('node-fetch')
-const log = require('../database/action');
-const action = require("../database/action");
+require('../client.util.actions/function-action')
 client.on('messageUpdate', async  (oldmessage, message) => {
     if(oldmessage.content === message.content) return;
     if(message.channel.type === "DM") return;
