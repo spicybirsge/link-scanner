@@ -9,6 +9,7 @@ const client = new Client({
     "DIRECT_MESSAGES",
     "DIRECT_MESSAGE_REACTIONS",
     "DIRECT_MESSAGE_TYPING"],
+    partials: ['MESSAGE', 'CHANNEL', 'REACTION'],
     restTimeOffset: 0,
     allowedMentions: {
         parse: ['users']
@@ -20,16 +21,16 @@ client.commands = new Collection();
 client.slashCommands = new Collection();
 require('./handler')(client);
 process.on('unhandledRejection', error => {
-    console.log(error)
+    console.error(error)
 })
 process.on("uncaughtException",error => {
-    console.log(error)
+    console.error(error)
 })
 process.on('multipleResolves',error => {
-    console.log(error)
+    console.error(error)
  });
  client.on('error', (err) => {
-     console.log(err)
+     console.error(err)
  })
 client.login(process.env.token)
 

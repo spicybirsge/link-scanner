@@ -14,7 +14,7 @@ module.exports = {
         .setColor("RANDOM")
         const embed3 = new MessageEmbed()
         .setTitle("Config")
-        .setDescription("`prefix` - change my prefix. \n`action` - set the action you want to take on users that post scams. \n`log` - configure logging.")
+        .setDescription("`prefix` - change my prefix. \n`action` - set the action you want to take on users that post scams. \n`log` - configure logging. \n`disable` - disable a category of logging.")
         .setColor("RANDOM")
         let embeds = [embed1, embed2, embed3]
         pagination({

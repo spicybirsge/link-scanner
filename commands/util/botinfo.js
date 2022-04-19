@@ -31,7 +31,7 @@ module.exports = {
     const totalchannels = results[2].reduce((acc,channelCount) => acc + channelCount, 0);
     let embed = new Discord.MessageEmbed()
     .setTitle("Statistics")
-    .setDescription(`•**Users:** ${totalMembers} \n•**Servers:** ${totalGuilds}\n•**Channels:** ${totalchannels}\n•**Discord.js:** ${discordjsVersion}\n•**Node:** ${process.version}\n \n **Host**\n•**Shard:** ${client.shard.ids*1+1}/${client.shard.count}\n•**Uptime:** ${ms(client.uptime)}\n•**Operating system:** ${process.platform} ${process.arch}\n•**CPU load:** ${percent.toFixed(2)}%\n•**Ram usage:** ${(process.memoryUsage().rss / 1024 / 1024).toFixed(2)}MB`)
+    .setDescription(`**Users:** ${totalMembers} \n**Servers:** ${totalGuilds}\n**Channels:** ${totalchannels}\n**Discord.js:** ${discordjsVersion}\n**Node:** ${process.version}\n \n **Host**\n**Shard:** ${client.shard.ids*1+1}/${client.shard.count}\n**Uptime:** ${ms(client.uptime)}\n**Operating system:** ${process.platform} ${process.arch}\n**CPU load:** ${percent.toFixed(2)}%\n**Ram usage:** ${(process.memoryUsage().rss / 1024 / 1024).toFixed(2)}MB`)
     .setColor("#db149f")
     message.channel.send({embeds: [embed]})
 

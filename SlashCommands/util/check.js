@@ -35,11 +35,9 @@ module.exports = {
                     if(data.match) {
             const scam111 = new MessageEmbed()
             .setTitle(":warning: Scam Domain Found")
-            .addField("Name:", data.matches[0].domain || "Was Unable to get the data :(")
-            .addField("Type of Scam:", data.matches[0].type.toLowerCase().replace("_", " ") || "Was Unable to get the data :(")
-            .addField("Redirect?", data.matches[0].followed ? "Yes" : "No" || "Was Unable to get the data :(")
+            .setDescription(`\`\`\`css\nDomain - ${data.matches[0].domain}\nType - ${data.matches[0].type.toLowerCase().replace("_", " ")}\nIs Domain a redirect? - ${data.matches[0].followed ? "Yes" : "No"}\`\`\``)
             .setColor("RED")
-            .setThumbnail("https://cdn.discordapp.com/attachments/943887879078297610/954598948859961375/Z.png")
+       
             return interaction.followUp({embeds: [scam111]})
 
         } else {

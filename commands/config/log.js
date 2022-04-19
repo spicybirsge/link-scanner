@@ -41,6 +41,8 @@ module.exports = {
                 return message.channel.send({content: `Now logging messages in #${channel.name}`})
 
 
+        } else {
+            return message.channel.send({embeds: [help]})
         }
     }
 }
