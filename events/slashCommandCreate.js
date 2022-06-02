@@ -4,7 +4,7 @@ client.on("interactionCreate", async (interaction) => {
     if(!interaction.guild) return;
    
     if (interaction.isCommand()) {
-        await interaction.deferReply({ ephemeral: false }).catch(() => {});
+     
 
         const cmd = client.slashCommands.get(interaction.commandName);
         if (!cmd)

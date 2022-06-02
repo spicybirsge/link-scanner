@@ -11,7 +11,7 @@ prefix.findOne({guildID: interaction.guild.id}, async (err, data) => {
         } else {
             GUILD_PREFIX = "s."
         }
-        return interaction.followUp({ content: `Prefix for this server: \`${GUILD_PREFIX}\`` });
+        return interaction.reply({ content: `Prefix for this server: \`${GUILD_PREFIX}\`` });
     })
     
     

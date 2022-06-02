@@ -17,7 +17,7 @@ module.exports = {
     run: async (client, interaction) => {
         const domain = interaction.options.getString('domain')
         const regex =   /([-a-zA-Z0-9_-]{2,256}\.[a-z]{2,10})(?:\/(\S*))?\b/g;
-        if(!regex.test(domain)) return interaction.followUp({content: ":x: No domain was found in this command."})
+        if(!regex.test(domain)) return interaction.reply({content: ":x: No domain was found in this command."})
         const f = await fetch('https://anti-fish.bitflow.dev/check', {
                     method: 'POST',
                     body: JSON.stringify({
@@ -38,10 +38,10 @@ module.exports = {
             .setDescription(`\`\`\`css\nDomain - ${data.matches[0].domain}\nType - ${data.matches[0].type.toLowerCase().replace("_", " ")}\nIs Domain a redirect? - ${data.matches[0].followed ? "Yes" : "No"}\`\`\``)
             .setColor("RED")
        
-            return interaction.followUp({embeds: [scam111]})
+            return interaction.reply({embeds: [scam111]})
 
         } else {
-            return interaction.followUp({content: ":x: This is a not known scam domain."})
+            return interaction.reply({content: ":x: This is a not known scam domain."})
 
         }
     })
