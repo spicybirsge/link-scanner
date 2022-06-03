@@ -16,8 +16,8 @@
 # Notes
 
 1. The bot runs with a sharder, you can run it without the sharder but some commands might not work.
-2. You are allowed to selfhost this for private use, but not public
-3. For you to have access to the eval command, please edit [this line](https://github.com/spicybirsge/link-scanner/blob/main/commands/util/eval.js#L12) to your ID
+2. You are allowed to selfhost this for private use, but not public read the [license](https://github.com/spicybirsge/link-scanner/blob/main/LICENSE).
+3. For you to have access to the eval command, please edit [this line](https://github.com/spicybirsge/link-scanner/blob/main/commands/util/eval.js#L12) to your ID.
 
 # How to selfhost?
 
