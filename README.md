@@ -18,6 +18,7 @@
 1. The bot runs with a sharder, you can run it without the sharder but some commands might not work.
 2. Please read the [license](https://github.com/spicybirsge/link-scanner/blob/main/LICENSE) and follow it before using this code.
 3. For you to have access to the eval command, please edit [this line](https://github.com/spicybirsge/link-scanner/blob/main/commands/util/eval.js#L12) to your ID.
+4. If you do get errors when selfhosting, then google the error and fix it your self, I am unable to provide support for this atm.
 
 ### How to selfhost?
 
