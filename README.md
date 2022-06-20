@@ -5,8 +5,8 @@
 ### Information
 
 1. Database: mongodb.
-2. Antiscam api: https://anti-fish.bitflow.dev/
-3. Library: discord.js
+2. Antiscam api: https://anti-fish.bitflow.dev/ .
+3. Library: discord.js .
 
 ### Environment Variables
 
