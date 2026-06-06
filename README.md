@@ -20,3 +20,4 @@ Link Scanner is an advanced antiphishing discord bot that protects your server f
 2. After your downloaded this src, open your terminal and changed the directory to your src directory (cd "your directory")
 3. Run `npm install`
 4. Run `node shard.js`
+5. Also might want to change [this line](https://github.com/spicybirsge/link-scanner/blob/main/commands/util/eval.js#L12C27-L12C45) to your id so you can run eval command.
