@@ -1,26 +1,20 @@
-### Link Scanner
+# Link Scanner
 
-- Link Scanner is an advanced antiphishing discord bot that protects your server from phishing links.
+Link Scanner is an advanced antiphishing discord bot that protects your server from phishing links. It utilizes the https://anti-fish.bitflow.dev/ api.
 
-### Information
 
-1. Database: mongodb.
-2. Antiscam api: https://anti-fish.bitflow.dev/ .
-3. Library: discord.js .
-
-### Environment Variables
+# Environment Variables
 
 1. `token=your discord bot token`
 2. `secret=your mongodb URI`
 
-### Notes
+# Notes
+1. I have not touched discord.js in a long time this code is pretty outdated, but I am sure it works so you can try to get it to run.
+2. Need any help join https://discord.gg/vbysEzHckS and I can try to help you.
 
-1. The bot runs with a sharder, you can run it without the sharder but some commands might not work.
-2. Please read the [license](https://github.com/spicybirsge/link-scanner/blob/main/LICENSE) and follow it before using this code.
-3. For you to have access to the eval command, please edit [this line](https://github.com/spicybirsge/link-scanner/blob/main/commands/util/eval.js#L12) to your ID.
-4. If you do get errors when selfhosting, then google the error and fix it your self, I am unable to provide support for this atm.
 
-### How to selfhost?
+
+# How to selfhost?
 
 1. Make sure to add the environment variables as mentioned.
 2. After your downloaded this src, open your terminal and changed the directory to your src directory (cd "your directory")
